@@ -9,7 +9,7 @@
 - **strcpy** – Copies a string from source to destination.
 - **strcmp** – Compares two strings.
 - **write** – Writes data to a file descriptor.
-- **read** – Reads data from a file descriptor. (WIP)
+- **read** – Reads data from a file descriptor.
 - **strdup** – Duplicates a string. (WIP)
 
 ## Compilation and Execution

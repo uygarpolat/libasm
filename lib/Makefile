@@ -6,7 +6,7 @@
 #    By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/28 13:09:12 by upolat            #+#    #+#              #
-#    Updated: 2025/03/28 22:37:07 by upolat           ###   ########.fr        #
+#    Updated: 2025/03/29 00:01:28 by upolat           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME    = libasm.a
 SRC_DIR = .
 OBJ_DIR = obj
 
-SRC_FILES = ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s
+SRC_FILES = ft_strlen.s ft_strcpy.s ft_strcmp.s \
+			ft_write.s ft_read.s
 
 NASM     = nasm
 # NASMFLAGS = -f macho64	# For Mac
