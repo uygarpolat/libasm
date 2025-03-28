@@ -8,7 +8,7 @@
 - **strlen** – Computes the length of a string.
 - **strcpy** – Copies a string from source to destination.
 - **strcmp** – Compares two strings.
-- **write** – Writes data to a file descriptor. (WIP)
+- **write** – Writes data to a file descriptor.
 - **read** – Reads data from a file descriptor. (WIP)
 - **strdup** – Duplicates a string. (WIP)
 
