@@ -6,7 +6,7 @@
 #    By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/28 13:10:35 by upolat            #+#    #+#              #
-#    Updated: 2025/03/28 19:24:54 by upolat           ###   ########.fr        #
+#    Updated: 2025/03/28 23:23:41 by upolat           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ all: $(NAME)
 # First one for Mac, second one for Linux
 $(NAME): $(SRC) $(LIB)
 #	$(CC) -arch x86_64 $(CFLAGS) -o $(NAME) $(SRC) $(LIB)
-	$(CC) $(CFLAGS) -o $(NAME) $(SRC) $(LIB)
+	$(CC) $(CFLAGS) -no-pie -o $(NAME) $(SRC) $(LIB)
 
 $(LIB):
 	$(MAKE) -C $(LIB_DIR)
