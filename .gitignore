@@ -1,0 +1,5 @@
+*.o
+libasm.a
+obj
+test_program
+assembly syntax sheet.txt
