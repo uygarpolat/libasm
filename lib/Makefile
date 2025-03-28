@@ -6,7 +6,7 @@
 #    By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/28 13:09:12 by upolat            #+#    #+#              #
-#    Updated: 2025/03/28 15:15:47 by upolat           ###   ########.fr        #
+#    Updated: 2025/03/28 19:25:03 by upolat           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ OBJ_DIR = obj
 SRC_FILES = ft_strlen.s ft_strcpy.s ft_strcmp.s
 
 NASM     = nasm
-NASMFLAGS = -f macho64	# For Mac
-# NASMFLAGS = -f elf64	# For Linux
+# NASMFLAGS = -f macho64	# For Mac
+NASMFLAGS = -f elf64	# For Linux
 
 OBJ_FILES = $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.s=.o))
 
