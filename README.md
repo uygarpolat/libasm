@@ -1,4 +1,4 @@
-# Libasm
+# Libasm (C functions recreated in ASM)
 
 **Libasm** is an optional project in the 42 curriculum where students build a static library entirely in 64-bit assembly language. In this project, many standard C library functions are re-implemented from scratch. All functions are written using NASM with Intel syntax.
 
