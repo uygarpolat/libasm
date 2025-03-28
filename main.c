@@ -92,7 +92,7 @@ int main(void)
         buf[ret] = '\0';
         assert(strcmp(buf, msg) == 0);
 
-        // Testing the error condition by writing to an invald file descriptor
+        // Testing the error condition by reading from an invalid file descriptor
         errno = 0;
         ret = ft_read(-1, buf, 10);
         assert(ret == -1);
