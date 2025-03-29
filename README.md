@@ -10,7 +10,9 @@
 - **strcmp** – Compares two strings.
 - **write** – Writes data to a file descriptor.
 - **read** – Reads data from a file descriptor.
-- **strdup** – Duplicates a string. (WIP)
+- **strdup** – Duplicates a string.
+
+![Screenshot from 2025-03-29 02-30-15](https://github.com/user-attachments/assets/c9b241f4-a681-449f-ad40-1382c5b167e1)
 
 ## Compilation and Execution
 
