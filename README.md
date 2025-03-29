@@ -11,8 +11,11 @@
 - **write** – Writes data to a file descriptor.
 - **read** – Reads data from a file descriptor.
 - **strdup** – Duplicates a string.
+  
+**Additional (not in spec):**
+- **atoi** – Converts a string to an integer.
 
-![Screenshot from 2025-03-29 02-30-15](https://github.com/user-attachments/assets/c9b241f4-a681-449f-ad40-1382c5b167e1)
+![Screenshot from 2025-03-29 23-58-00](https://github.com/user-attachments/assets/980a047a-6ca0-4d0f-8b12-cab08822fcfc)
 
 ## Compilation and Execution
 
