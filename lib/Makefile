@@ -6,7 +6,7 @@
 #    By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/28 13:09:12 by upolat            #+#    #+#              #
-#    Updated: 2025/03/29 00:01:28 by upolat           ###   ########.fr        #
+#    Updated: 2025/03/29 01:55:53 by upolat           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRC_DIR = .
 OBJ_DIR = obj
 
 SRC_FILES = ft_strlen.s ft_strcpy.s ft_strcmp.s \
-			ft_write.s ft_read.s
+			ft_write.s ft_read.s ft_strdup.s
 
 NASM     = nasm
 # NASMFLAGS = -f macho64	# For Mac
