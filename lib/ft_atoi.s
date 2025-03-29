@@ -57,7 +57,7 @@ ft_atoi:
 	jl		.end
 	cmp		rdi, '9'
 	jg		.end
-	mov		rax, qword [rel nbr]        ; load current value of nbr into rax
+	mov		rax, qword [rel nbr]	; load current value of nbr into rax
 
 	mov		rax, qword [rel nbr]	; load current nbr into rax
 	mov		rcx, rax				; save nbr in RCX
