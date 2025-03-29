@@ -12,6 +12,7 @@ int		ft_strcmp(const char *s1, const char *s2);
 ssize_t	ft_write(int fd, const void *buf, size_t count);
 ssize_t	ft_read(int fd, void *buf, size_t count);
 char	*ft_strdup(const char *s);
+int     ft_atoi(const char *nptr);
 
 int main(void)
 {
@@ -125,6 +126,18 @@ int main(void)
 
 		printf("✅ ft_strdup tests passed!\n");
 	}
+
+    {
+        // Testing ft_atoi:
+        assert(ft_atoi("42") == atoi("42"));
+        assert(ft_atoi("                    93") == atoi("                    93"));
+        assert(ft_atoi("   -17") == atoi("   -17"));
+        assert(ft_atoi("   +0234      ") == atoi("   +0234      "));
+        assert(ft_atoi("4193 with words") == atoi("4193 with words"));
+        assert(ft_atoi("words and 987") == atoi("words and 987"));
+        assert(ft_atoi("") == atoi(""));
+        printf("✅ ft_atoi tests passed!\n");
+    }    
 
     return (0);
 }

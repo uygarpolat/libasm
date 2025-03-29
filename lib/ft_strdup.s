@@ -21,7 +21,7 @@ ft_strdup:
 	call	ft_strcpy
 	ret
 
-.error
+.error:
 	pop		rsi
     mov		r10, 12
     call	__errno_location
