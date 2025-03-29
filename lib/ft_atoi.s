@@ -57,10 +57,9 @@ ft_atoi:
 	jl		.end
 	cmp		rdi, '9'
 	jg		.end
-	mov		rax, qword [rel nbr]	; load current value of nbr into rax
 
 	mov		rax, qword [rel nbr]	; load current nbr into rax
-	mov		rcx, rax				; save nbr in RCX
+	mov		rcx, rax				; save nbr in rcx
 	shl		rax, 1					; rax = nbr * 2
 	lea		rax, [rax + rcx*8]		; rax = (nbr * 2) + (nbr * 8) = nbr * 10
 
@@ -72,6 +71,6 @@ ft_atoi:
 	jmp		.loop2
 
 .end:
-	mov		rax, qword [rel nbr]  ; load nbr into rax
-	imul	rax, qword [rel sign] ; multiply rax by sign (result stored in rax)
+	mov		rax, qword [rel nbr]
+	imul	rax, qword [rel sign]
 	ret
