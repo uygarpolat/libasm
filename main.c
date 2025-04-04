@@ -13,6 +13,7 @@ ssize_t	ft_write(int fd, const void *buf, size_t count);
 ssize_t	ft_read(int fd, void *buf, size_t count);
 char	*ft_strdup(const char *s);
 int     ft_atoi(const char *nptr);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 int main(void)
 {
@@ -137,7 +138,29 @@ int main(void)
         assert(ft_atoi("words and 987") == atoi("words and 987"));
         assert(ft_atoi("") == atoi(""));
         printf("✅ ft_atoi tests passed!\n");
-    }    
+    }
+
+	{
+		// Testing ft_memcpy:
+		char src[50] = "Hello, memory!";
+		char dest[50] = {0};
+		ft_memcpy(dest, src, strlen(src) + 1);
+		assert(strcmp(dest, src) == 0);
+	
+		char original[20] = "unchanged";
+		char temp[20];
+		strcpy(temp, original);
+		ft_memcpy(temp, "modified", 0);
+		assert(strcmp(temp, original) == 0);
+	
+		char src2[] = "abcdef";
+		char dest2[10] = {0};
+		ft_memcpy(dest2, src2, 5);
+		dest2[5] = '\0';
+		assert(strcmp(dest2, "abcde") == 0);
+	
+		printf("✅ ft_memcpy tests passed!\n");
+	}	
 
     return (0);
 }
