@@ -12,8 +12,9 @@ int		ft_strcmp(const char *s1, const char *s2);
 ssize_t	ft_write(int fd, const void *buf, size_t count);
 ssize_t	ft_read(int fd, void *buf, size_t count);
 char	*ft_strdup(const char *s);
-int     ft_atoi(const char *nptr);
+int     ft_atoi(char *nptr);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+void    *ft_memset(void* s, int c, size_t n);
 
 int main(void)
 {
@@ -160,7 +161,28 @@ int main(void)
 		assert(strcmp(dest2, "abcde") == 0);
 	
 		printf("✅ ft_memcpy tests passed!\n");
-	}	
+	}
+
+    {
+        // Testing ft_memset:
+        char buf1[20];
+        ft_memset(buf1, 'A', 10);
+        for (size_t i = 0; i < 10; i++) {
+            assert(buf1[i] == 'A');
+        }
+    
+        char buf2[20] = "Hello, World!";
+        ft_memset(buf2, 'X', 0);
+        assert(strcmp(buf2, "Hello, World!") == 0);
+    
+        char buf3[20];
+        ft_memset(buf3, 'Z', sizeof(buf3));
+        for (size_t i = 0; i < sizeof(buf3); i++) {
+            assert(buf3[i] == 'Z');
+        }
+    
+        printf("✅ ft_memset tests passed!\n");
+    }    
 
     return (0);
 }
