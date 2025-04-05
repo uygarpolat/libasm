@@ -6,7 +6,7 @@
 /*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 12:44:37 by upolat            #+#    #+#             */
-/*   Updated: 2025/04/05 18:31:51 by upolat           ###   ########.fr       */
+/*   Updated: 2025/04/05 20:38:45 by upolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,6 +199,37 @@ int main(void)
     
         printf("✅ ft_bzero tests passed!\n");
     }
+
+    {
+        // Testing ft_strchr
+        char *result;
+    
+        result = ft_strchr("hello", 'e');
+        assert(result != NULL);
+        assert(*result == 'e');
+        assert(result == "hello" + 1);
+    
+        result = ft_strchr("banana", 'a');
+        assert(result != NULL);
+        assert(*result == 'a');
+        assert(result == "banana" + 1);
+    
+        result = ft_strchr("hello", 'z');
+        assert(result == NULL);
+    
+        result = ft_strchr("test", '\0');
+        assert(result != NULL);
+        assert(*result == '\0');
+    
+        result = ft_strchr("", '\0');
+        assert(result != NULL);
+        assert(*result == '\0');
+    
+        result = ft_strchr("", 'a');
+        assert(result == NULL);
+    
+        printf("✅ ft_strchr tests passed!\n");
+    }    
 
     return (0);
 }
