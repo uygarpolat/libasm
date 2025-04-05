@@ -15,8 +15,9 @@
 **Additional (not in spec):**
 - **atoi** – Converts a string to an integer.
 - **memcpy** – Copies a block of memory.
+- **memset** - Sets a block of memory to a specific value.
 
-![Screenshot from 2025-04-05 16-52-58](https://github.com/user-attachments/assets/d783c200-b9ff-412f-a943-6058e093d9b9)
+![Screenshot from 2025-04-05 18-07-37](https://github.com/user-attachments/assets/82516ad4-ec0b-4703-9bb6-0a734e0f3922)
 
 ## Compilation and Execution
 
