@@ -15,10 +15,11 @@
 **Additional (not in spec):**
 - **atoi** – Converts a string to an integer.
 - **memcpy** – Copies a block of memory.
-- **memset** - Sets a block of memory to a specific value.
-- **bzero** - Sets a block of memory to zero.
+- **memset** – Sets a block of memory to a specific value.
+- **bzero** – Sets a block of memory to zero.
+- **strchr** – Finds the first occurrence of a character in a string.
 
-![Screenshot from 2025-04-05 18-38-10](https://github.com/user-attachments/assets/de7ef7ef-30e5-4332-b38f-84924f343fce)
+![Screenshot from 2025-04-05 20-40-35](https://github.com/user-attachments/assets/0af79f5a-aad7-486f-96ba-c7f561f9f664)
 
 ## Compilation and Execution
 
