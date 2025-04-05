@@ -1,20 +1,16 @@
-#include <stdio.h>
-#include <stddef.h>
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <assert.h>
-#include <errno.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: upolat <upolat@student.hive.fi>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/28 12:44:37 by upolat            #+#    #+#             */
+/*   Updated: 2025/04/05 18:31:51 by upolat           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-size_t	ft_strlen(const char *str);
-char	*ft_strcpy(char *dst, const char *src);
-int		ft_strcmp(const char *s1, const char *s2);
-ssize_t	ft_write(int fd, const void *buf, size_t count);
-ssize_t	ft_read(int fd, void *buf, size_t count);
-char	*ft_strdup(const char *s);
-int     ft_atoi(char *nptr);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-void    *ft_memset(void* s, int c, size_t n);
+#include "main.h"
 
 int main(void)
 {
@@ -167,9 +163,8 @@ int main(void)
         // Testing ft_memset:
         char buf1[20];
         ft_memset(buf1, 'A', 10);
-        for (size_t i = 0; i < 10; i++) {
+        for (size_t i = 0; i < 10; i++)
             assert(buf1[i] == 'A');
-        }
     
         char buf2[20] = "Hello, World!";
         ft_memset(buf2, 'X', 0);
@@ -177,12 +172,33 @@ int main(void)
     
         char buf3[20];
         ft_memset(buf3, 'Z', sizeof(buf3));
-        for (size_t i = 0; i < sizeof(buf3); i++) {
+        for (size_t i = 0; i < sizeof(buf3); i++)
             assert(buf3[i] == 'Z');
-        }
     
         printf("✅ ft_memset tests passed!\n");
-    }    
+    }
+
+    {
+        // Testing ft_bzero:
+        char buf1[20];
+        memset(buf1, 'A', sizeof(buf1));
+        ft_bzero(buf1, sizeof(buf1));
+        for (size_t i = 0; i < sizeof(buf1); i++)
+            assert(buf1[i] == 0);
+    
+        char buf2[20] = "Hello, world!";
+        ft_bzero(buf2 + 5, 3);
+        assert(buf2[5] == 0);
+        assert(buf2[6] == 0);
+        assert(buf2[7] == 0);
+        assert(strncmp(buf2, "Hello", 5) == 0);
+    
+        char buf3[20] = "Testing";
+        ft_bzero(buf3, 0);
+        assert(strcmp(buf3, "Testing") == 0);
+    
+        printf("✅ ft_bzero tests passed!\n");
+    }
 
     return (0);
 }
